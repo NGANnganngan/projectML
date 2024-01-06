@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLASL</title>
+</head>
+<body>
+    <div class="app">
+
+        <div class="form-section">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+
+        <h1>                                   </h1>
+
+        <div class="video-section">
+            <video autoplay muted loop width="500" controls>
+                <source src="http://127.0.0.1:8000/upload/{{vid_path}}.mp4" type="video/mp4"> 
+            </video>
+
+            <!-- <video autoplay muted loop width="500" controls>
+                <source src="http://127.0.0.1:8000/26300.mp4" type="video/mp4"> 
+            </video> -->
+
+            <h3 name="t_t_s">{{predict_text}}</h3>
+            <h3 >{{vid_path}}</h3>
+            <audio controls autoplay>
+                <source src="http://127.0.0.1:8000/upload/{{vid_path}}_audio.mp3">
+            </audio>
+        </div>
+
+        
+    </div>
+</body>
+</html>
